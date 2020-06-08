@@ -1,5 +1,5 @@
 import  { createStore, cimbineReducers, combineReducers } from 'redux';
-import { todos } from './todos/reducers'
+import { todos } from './reducers'
 const reducers = {
     todos
 };

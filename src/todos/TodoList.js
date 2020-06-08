@@ -5,10 +5,10 @@ import "./TodoList.css";
 import NewTodoForm from './NewTodoForm';
 import { removeTodo } from './actions'
 
-const TodoList = ({todos = [{ text: 'Hello'}] }) => (
+const TodoList = ({todos = [], onRemovePressed }) => (
     <div className="list-wrapper">
         <NewTodoForm />
-        {todos.map(todo=> <TodoListItem todo={todo} />)}
+        {todos.map(todo=> <TodoListItem todo={todo} onRemovePressed={onRemovePressed} />)}
     </div>
 );
 const mapStateToProps = state => ({
